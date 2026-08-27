@@ -1,0 +1,38 @@
+BASKET MANAGER v8.9 · PWA MULTIPLATAFORMA · PRUEBA LOCAL
+
+Esta versión conserva el HTML original y añade únicamente la capa PWA:
+- index.html
+- manifest.webmanifest
+- sw.js
+- iconos 180 / 192 / 512
+
+OBJETIVO
+Validar la aplicación antes de modificar GitHub Pages.
+
+PRUEBA EN PC (PWA + SERVICE WORKER)
+1. Abre CMD dentro de esta carpeta.
+2. Ejecuta:
+   python -m http.server 8003
+3. En el MISMO PC abre:
+   http://localhost:8003
+4. Comprueba navegación, login, gráficos, Supabase y funciones principales.
+5. En Chrome/Edge debería quedar disponible la opción de instalar cuando
+   el navegador considere cumplidos sus criterios.
+
+PRUEBA VISUAL EN ANDROID / iPHONE / iPAD POR WIFI
+1. Mantén el servidor del PC ejecutándose.
+2. Averigua la IP Wi-Fi del PC con ipconfig.
+3. En el dispositivo abre:
+   http://IP_DEL_PC:8003
+4. Comprueba el diseño y las funciones.
+
+IMPORTANTE
+En otro dispositivo, HTTP por IP local no es un contexto seguro para Service Worker.
+Por eso esta prueba sirve para validar layout y funcionamiento, pero la instalación
+PWA definitiva en móviles se valida después mediante GitHub Pages (HTTPS).
+
+OFFLINE
+El Service Worker guarda el shell local de Basket Manager.
+Las peticiones a Supabase se dejan fuera de la caché.
+Los recursos CDN externos (Google Fonts / Chart.js) se mantienen network-only
+en esta primera versión para no alterar el comportamiento original.
