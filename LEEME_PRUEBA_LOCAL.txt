@@ -36,3 +36,4 @@ El Service Worker guarda el shell local de Basket Manager.
 Las peticiones a Supabase se dejan fuera de la caché.
 Los recursos CDN externos (Google Fonts / Chart.js) se mantienen network-only
 en esta primera versión para no alterar el comportamiento original.
+Publicación GitHub Pages
